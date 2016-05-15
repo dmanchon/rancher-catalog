@@ -1,0 +1,6 @@
+yaml name: Elasticsearch
+description:  ES cluster
+version: 0
+category: DB
+maintainer: dmanchon
+projectURL: dmanchon.xyz

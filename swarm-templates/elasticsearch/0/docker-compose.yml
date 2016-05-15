@@ -1,0 +1,24 @@
+master:
+  image: elasticsearch:2
+  ports:
+     - "9200:9200"
+  restart: always
+  container_name: esmaster
+esnode1:
+  image: elasticsearch:2
+  command: elasticsearch --discovery.zen.ping.unicast.hosts=esmaster
+  restart: always
+  links:
+    - master
+  environment:
+    - "affinity:container!=*master*"
+    - "affinity:container!=*es-node*"
+esnode2:
+  image: elasticsearch:2
+  command: elasticsearch --discovery.zen.ping.unicast.hosts=esmaster
+  restart: always
+  links:
+    - master
+  environment:
+    - "affinity:container!=*master*"
+    - "affinity:container!=*es-node*"
