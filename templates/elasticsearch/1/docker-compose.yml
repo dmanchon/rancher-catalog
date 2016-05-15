@@ -4,6 +4,8 @@ master:
      - "9200:9200"
   restart: always
   container_name: esmaster
+  mem_limit: 1g
+  cpu_shares: 100
 
 esnode:
   image: dmanchon/elasticsearch:v0.2
@@ -11,3 +13,5 @@ esnode:
   restart: always
   links:
     - master
+  mem_limit: 1g
+  cpu_shares: 100
