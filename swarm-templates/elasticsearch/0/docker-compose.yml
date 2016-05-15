@@ -5,16 +5,16 @@ master:
   restart: always
   container_name: esmaster
 
-esnode1:
+esnode:
   image: elasticsearch:2.2.1
   command: elasticsearch --discovery.zen.ping.unicast.hosts=esmaster
   restart: always
   links:
     - master
-
-esnode2:
-  image: elasticsearch:2.2.1
-  command: elasticsearch --discovery.zen.ping.unicast.hosts=esmaster
-  restart: always
-  links:
-    - master
+#
+# esnode2:
+#   image: elasticsearch:2.2.1
+#   command: elasticsearch --discovery.zen.ping.unicast.hosts=esmaster
+#   restart: always
+#   links:
+#     - master
