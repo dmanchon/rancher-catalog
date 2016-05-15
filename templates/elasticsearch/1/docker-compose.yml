@@ -1,12 +1,12 @@
 master:
-  image: dmanchon/elasticsearch:v0.01
+  image: dmanchon/elasticsearch:v0.1
   ports:
      - "9200:9200"
   restart: always
   container_name: esmaster
 
 esnode:
-  image: dmanchon/elasticsearch:v0.01
+  image: dmanchon/elasticsearch:v0.1
   command: elasticsearch --discovery.zen.ping.unicast.hosts=master
   restart: always
   links:
