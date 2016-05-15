@@ -1,0 +1,5 @@
+.catalog:
+  name: "Cassandra"
+  version: v0.0.1
+  description: "xx"
+  minimum_rancher_version: v1.0.0
