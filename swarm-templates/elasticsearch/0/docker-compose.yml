@@ -7,7 +7,7 @@ master:
 
 esnode:
   image: elasticsearch:2.2.1
-  command: elasticsearch --discovery.zen.ping.unicast.hosts=esmaster
+  command: elasticsearch --discovery.zen.ping.unicast.hosts=master
   restart: always
   links:
     - master
