@@ -1,6 +1,6 @@
 yaml name: Elasticsearch
 description:  ES cluster
-version: 0
-category: DB
+version: v0.0.1
+category: DBs
 maintainer: dmanchon
 projectURL: dmanchon.xyz
